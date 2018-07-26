@@ -1,0 +1,72 @@
+body, td, a, p, .h {
+    font-family: arial,sans-serif;
+    font-size: 17px;
+    margin: 0;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10% 80% 10%;
+  grid-template-areas: "left right"
+                        "main main"
+                        "lfoot rfoot";
+  grid-gap: 1em;
+  width: 100%;
+  height: 100%;
+}
+
+/* Navbar */
+
+div .left {
+  grid-area: left;
+  padding-top: 30px;
+  padding-left: 15px;
+  border: 1px solid black;
+}
+
+div .right {
+  grid-area: right;
+  justify-self: end;
+  border: 1px solid black;
+  padding-right: 45px;
+  padding-top: 25px;
+}
+
+img {
+  height: 30px;
+  vertical-align: middle;
+}
+
+img.icon.user-i {
+  height: 35px;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 15px;
+    color: #000;
+    opacity: 0.75;
+}
+
+/* Middle Section: Logo, Search Bar and 2 Btns */
+
+div .main {
+  grid-area: main;
+  border: 1px solid black;
+  justify-self: center;
+  align-self: center;
+}
+
+.icon.logo {
+  height: 20%;
+}
+
+
+div .search {
+  grid-area: main;
+  justify-self: center;
+  align-self: center;
+}
