@@ -58,6 +58,10 @@ a {
     opacity: 0.75;
 }
 
+a:hover, a:active {
+    text-decoration: underline;
+}
+
 
 /* Middle Section: Logo, Search Bar and 2 Btns */
 
@@ -127,4 +131,10 @@ footer {
 
 span.right {
   margin-left: 70%;
+}
+
+
+#mic {
+  position: relative;
+  left: -42px;
 }
