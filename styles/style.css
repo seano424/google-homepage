@@ -1,3 +1,11 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+
 body, td, a, p, .h {
     font-family: arial,sans-serif;
     font-size: 17px;
@@ -8,10 +16,11 @@ body, td, a, p, .h {
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 10% 80% 10%;
+  grid-template-rows: 10% 40% 40% 10%;
   grid-template-areas: "left right"
                         "main main"
-                        "lfoot rfoot";
+                        "search search"
+                        "foot foot";
   grid-gap: 1em;
   width: 100%;
   height: 100%;
@@ -23,13 +32,11 @@ div .left {
   grid-area: left;
   padding-top: 30px;
   padding-left: 15px;
-  border: 1px solid black;
 }
 
 div .right {
   grid-area: right;
   justify-self: end;
-  border: 1px solid black;
   padding-right: 45px;
   padding-top: 25px;
 }
@@ -51,22 +58,73 @@ a {
     opacity: 0.75;
 }
 
+
 /* Middle Section: Logo, Search Bar and 2 Btns */
 
 div .main {
   grid-area: main;
-  border: 1px solid black;
   justify-self: center;
-  align-self: center;
+  align-self: flex-end;
 }
 
 .icon.logo {
-  height: 20%;
+  height: 60%;
+  text-align: center;
+}
+
+/* Google Form */
+form {
+  grid-area: search;
+  justify-self:  center;
+  align-self: stretch;
+}
+
+#search {
+  padding-top: 5px;
+  height: 50px;
+  width: 750px;
+  background: url(data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw%3D%3D) transparent;
+}
+
+#search:hover {
+    border-color: #a0a0a0 #b9b9b9 #b9b9b9 #b9b9b9 !important;
+}
+
+div .button {
+  text-align: center;
+  padding: 20px;
+}
+
+button {
+    width: 150;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow:  none;
+    background-color: #f2f2f2; /* Green */
+    border: none;
+    color: #757575;
+    font-family: arial, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    font-weight:  bold;
 }
 
 
-div .search {
-  grid-area: main;
-  justify-self: center;
-  align-self: center;
+/* Footer */
+
+footer {
+  grid-area: foot;
+  background-color: grey;
+  background: #f2f2f2;
+  border-top: 1px solid #e4e4e4;
+  margin-top: -18px;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+span.right {
+  margin-left: 70%;
 }
